@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <title>Quiz Hero</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- You don't need to change noChange.js file. It's fine -->
+    <!-- You don't need to change noChange.js file. It's fine -->
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              common: ["Rubik", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="bg-white font-common">
+    <!-- Header/Navbar section start -->
+    <header class="h-16 flex items-center shadow-sm">
+      <nav class="flex justify-between items-center w-9/12 mx-auto">
+        <div class="text-zinc-800 font-bold uppercase">
+          <h1 class="text-lg">Quiz <span class="text-green-700">HERO</span></h1>
+          <p class="text-[10px] font-normal capitalize -mt-1">
+            Get ready to Quiz and be amazed!
+          </p>
+        </div>
+
+      </nav>
+    </header>
+    <!-- Header/Navbar section end -->
+
+    <!-- main start  -->
+    <section class="lg:w-9/12 md:w-[90%] w-[95%] text-justify mx-auto my-8">
+        <!-- question 1  -->
+        <h1 class=" my-6 text-center text-3xl  text-green-600  font-bold" > My Blogs </h1>
+        <div>
+            <h1 class="text-2xl my-3">
+                <span class="bg-green-600 px-2 rounded text-white text-3xl" >Q1</span> Different between Map,Filter,For Each,find
+            </h1>
+            <p>
+            <li class="my-4">
+                Map: This function is used to create a new array by applying a transformation function to each element of an existing array. The map function returns a new array of the same length as the original array, with each element transformed based on the function provided. The original array remains unchanged. <br>
+                <code class="bg-red-400 text-white">const numbers = [1, 2, 3, 4, 5]; <br>
+                    const doubledNumbers = numbers.map(number => number * 2); <br>
+                    console.log(doubledNumbers); // Output: [2, 4, 6, 8, 10]
+                    </code>
+            </li>
+             
+            <li  class="my-4">
+                ForEach: This function is used to loop through an array and perform a specified action for each element. It does not return anything and does not modify the original array. <br>
+                <code class="bg-red-400 text-white">const numbers = [1, 2, 3, 4, 5]; <br>
+                    numbers.forEach(number => console.log(number)); // Output: 1 2 3 4 5
+                    </code>
+
+            </li>
+            <li  class="my-4">
+                Filter: This function is used to create a new array by filtering out elements that do not meet a certain criteria. The filter function returns a new array containing only the elements that meet the specified condition. <br>
+                <code class="bg-red-400 text-white">const numbers = [1, 2, 3, 4, 5]; <br>
+                    const evenNumbers = numbers.filter(number => number % 2 === 0); <br>
+                    console.log(evenNumbers); // Output: [2, 4]
+
+                    </code>
+
+            </li>
+            <li  class="my-4">
+                Find: This function is used to find the first element in an array that meets a certain condition. The find function returns the first element that satisfies the condition, or undefined if no such element is found. <br>
+                <code class="bg-red-400 text-white">const numbers = [1, 2, 3, 4, 5];
+                    <br>
+                    const firstEvenNumber = numbers.find(number => number % 2 === 0);
+<br>
+console.log(firstEvenNumber); // Output: 2
+
+                    </code>
+
+            </li>
+            
+             
+            
+            </p>
+        </div>
+        <!-- question 2  -->
+
+        <div>
+            <h1 class="text-2xl my-3">
+                <span class="bg-green-600 px-2 rounded text-white text-3xl" >Q2</span> Different Bewtween Local Storage,Session Storage and Cookies
+
+
+            </h1>
+            <p>
+                <li  class="my-4">
+                    LocalStorage: It is a web storage API that allows you to store data in the browser with no expiration date. Data stored in localStorage is available even after the browser is closed and reopened. This data can only be accessed by the domain that created it.
+
+                    
+                </li  class="my-4">
+                <li>
+                    SessionStorage: It is a web storage API that allows you to store data in the browser for the duration of the session. Data stored in sessionStorage is available only during the current session and is lost when the browser is closed. This data can only be accessed by the domain that created it.
+                    
+                    
+                </li>
+                <li  class="my-4">
+                    Cookies: Cookies are small text files that are stored on a user's computer by a website. They can be used to store data such as user preferences, login status, and shopping cart contents. Cookies can be set with an expiration date or can be set to expire when the user closes the browser. Cookies can be accessed by any page on the same domain that created them.
+                </li>
+            </p>
+        </div>
+
+        <!-- question 3 -->
+
+<div>
+    <h1 class="text-2xl my-3">
+        <span class="bg-green-600 px-2 rounded text-white text-3xl" >Q3</span> What is Event Loop and it's Working Proccess
+    </h1>
+    <p>
+        The event loop is a key concept in JavaScript that is responsible for handling asynchronous events and maintaining the concurrency model of JavaScript. It is a continuous loop that runs in the background of a JavaScript runtime environment, such as a web browser or Node.js, and continuously checks the event queue for new events to process. <br>
+
+When an asynchronous event occurs, such as a user click, a network request, or a timer expiring, it is added to the event queue. The event loop continuously checks the event queue and when an event is found, it is removed from the queue and processed by the event loop. <br>
+
+The event loop works by following these basic steps:
+<li  class="my-4">Execute any synchronous tasks in the call stack until it is empty. </li>
+<li  class="my-4"> Check the event queue for any pending events.</li>
+<li  class="my-4"> If an event is found in the event queue, remove it from the queue and execute its associated callback function (i.e., the function that was registered to handle that event).</li>
+<li  class="my-4">If the event queue is empty, wait for new events to arrive. </li>
+This process allows JavaScript to handle asynchronous events in a non-blocking and efficient manner, while also ensuring that the synchronous code executes first before processing any pending events.
+    </p>
+</div>
+
+
+    </section>
+
+    <!-- main end  -->
+    <!-- Footer section start -->
+    <footer class="py-10 text-center text-sm">
+      Copyright © 2023 Quiz Hero All Rights Reserved.
+    </footer>
+    <!-- Footer section end -->
+  </body>
+</html>

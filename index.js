@@ -6,6 +6,7 @@ let answers = [];
 
 // Dom elements called
 let startQuiz = document.querySelector("#startQuiz");
+console.log(startQuiz);
 let rulesContainer = document.querySelector("#rulesContainer");
 let alertContainer = document.querySelector("#alertContainer");
 let submitContainer = document.querySelector("#submitContainer");
@@ -109,7 +110,7 @@ document.querySelector("#submit").addEventListener("click", () => {
 
   // data setting on local storage and getting data from local storage
   let storage = JSON.parse(localStorage.getItem("results"));
-  console.log(storage);
+  // console.log(storage);
   if (storage) {
     localStorage.setItem(
       "results",
@@ -138,7 +139,7 @@ document.querySelector("#submit").addEventListener("click", () => {
   // Right side bar/ answer section
   let x = setTimeout(() => {
     showAnswers(answers);
-    // console.log(answers)
+   
     displayResult.innerHTML = `<div
     class="h-[220px] w-[220px] mx-auto mt-8 flex flex-col justify-center border-2 rounded-tr-[50%] rounded-bl-[50%]"
   >
@@ -185,3 +186,11 @@ document.querySelector("#submit").addEventListener("click", () => {
   }, 1500);
   window.scrollTo(0, 0);
 });
+
+// function blogOpen(){
+//   window.open("blog.html")
+// }
+
+document.getElementById("blog-page").addEventListener("click",()=>{
+  window.open("blog.html")
+})
