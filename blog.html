@@ -7,7 +7,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-    <title>Quiz Hero</title>
+    <title >Quiz Hero-Blog</title> 
+    
     <script src="https://cdn.tailwindcss.com"></script>
 
     <!-- You don't need to change noChange.js file. It's fine -->
@@ -30,7 +31,7 @@
     <header class="h-16 flex items-center shadow-sm">
       <nav class="flex justify-between items-center w-9/12 mx-auto">
         <div class="text-zinc-800 font-bold uppercase">
-          <h1 class="text-lg">Quiz <span class="text-green-700">HERO</span></h1>
+         <a href="index.html"> <h1 class="text-lg">Quiz <span class="text-green-700">HERO</span></h1></a>
           <p class="text-[10px] font-normal capitalize -mt-1">
             Get ready to Quiz and be amazed!
           </p>
@@ -133,6 +134,24 @@ The event loop works by following these basic steps:
 This process allows JavaScript to handle asynchronous events in a non-blocking and efficient manner, while also ensuring that the synchronous code executes first before processing any pending events.
     </p>
 </div>
+
+<!-- question 4  -->
+<h1 class="text-2xl my-3">
+    <span class="bg-green-600 px-2 rounded text-white text-3xl" >Q3</span> What is the purpose of quizTimer Function ?
+</h1>
+<p class=" my-3">
+    The quizTimer function  that creates a timer to display the elapsed time on an HTML element with an id of count. The function takes one parameter dismiss, which if truthy, stops the timer.
+</p>
+<!-- question 5  -->
+<h1 class="text-2xl my-3">
+    <span class="bg-green-600 px-2 rounded text-white text-3xl" >Q4</span> What is the purpose of chooseQuiz Function ?
+</h1>
+<p class=" my-3">
+    This  chooseQuiz function that takes two parameters: index and givenAns. The purpose of the function is to select or choose a quiz by its index and store the given answer in the answers array. The function first checks if an answer for the selected quiz already exists in the answers array using the Array.find() method. If an answer exists, it updates the givenAns property of the corresponding quiz object using the Array.splice() method. <br>
+
+If the answer does not exist, the function creates a new quiz object with the givenAns property and pushes it to the answers array using the Array.push() method.
+The function then calls another function named displayAnswers and passes the answers array as an argument to update the display of the answer summary.
+</p>
 
 
     </section>

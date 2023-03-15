@@ -6,7 +6,6 @@ let answers = [];
 
 // Dom elements called
 let startQuiz = document.querySelector("#startQuiz");
-console.log(startQuiz);
 let rulesContainer = document.querySelector("#rulesContainer");
 let alertContainer = document.querySelector("#alertContainer");
 let submitContainer = document.querySelector("#submitContainer");
@@ -41,7 +40,7 @@ startQuiz.addEventListener("click", () => {
     }
     counter.innerText = counterNum;
     counterNum--;
-  }, 100);
+  }, 1000);
 });
 
 // All quiz data fetched from json
